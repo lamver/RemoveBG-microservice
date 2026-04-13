@@ -2,10 +2,10 @@ services:
   bg-remover:
     build: .
     ports:
-      - "8080:8000"
+      - "${EXTERNAL_PORT}:8000"
     volumes:
-      - ./u2net_models:/root/.u2net
+      - ./model_data:/root/.u2net
     restart: always
 
 volumes:
-  u2net_models:
+  model_data:
