@@ -1,8 +1,8 @@
 services:
   bg-remover:
     build: .
-    ports:
-      - "${EXTERNAL_PORT}:8000"
+    #ports:
+    #  - "${EXTERNAL_PORT}:8000"
     volumes:
       - ./model_data:/root/.u2net
     restart: always
