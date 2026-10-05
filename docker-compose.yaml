@@ -1,6 +1,9 @@
 services:
   bg-remover:
     build: .
+    environment:
+      BG_MODEL: ${BG_MODEL:-birefnet-general}
+      BG_CPU_MEM_ARENA: ${BG_CPU_MEM_ARENA:-1}
     #ports:
     #  - "${EXTERNAL_PORT}:8000"
     volumes:
